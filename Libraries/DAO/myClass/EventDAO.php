@@ -17,7 +17,7 @@
 				$this->dbConfig['name'] = $dbConfig['name'];
 				
 				$this->db = new PDO("mysql:host={$this->dbConfig['host']};dbname={$this->dbConfig['name']}", $this->dbConfig['user'], $this->dbConfig['pass']);
-				$this->dm = $dm;
+				$this->dm = $dm; // Data Mapper
 			}
 			catch(PDOException $e){
 				die($e->getMessage());				
